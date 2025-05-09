@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PENGUMUMAN KELULUSAN - NELSA</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1612710458463-d6a261b3409d?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-transform: uppercase;
+    }
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.65); /* Memperjelas latar belakang */
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .container {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      max-width: 650px;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 36px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: 600;
+    }
+    .name {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 30px 0 10px;
+      color: #0e6251;
+    }
+    .status {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 20px;
+      position: relative;
+    }
+    .status .tidaklulus {
+      text-decoration: line-through;
+      color: #c0392b;
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+      display: inline-block;
+    }
+    .status .lulus {
+      color: #27ae60;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      transition: opacity 1s ease-in-out;
+      font-size: 34px;
+    }
+    .show-lulus .tidaklulus {
+      opacity: 0;
+    }
+    .show-lulus .lulus {
+      opacity: 1;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+    /* Teks berjalan */
+    .marquee {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2c3e50;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: inline-block;
+      animation: marquee 10s linear infinite;
+    }
+    @keyframes marquee {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container" id="resultBox">
+      <!-- Logo Honda dan Logo Sekolah Harber -->
+      <div class="logo-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Honda_logo.svg" alt="Honda Logo" class="logo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Harber_College_logo.png" alt="Sekolah Harber Logo" class="logo" />
+      </div>
+
+      <!-- Teks Berjalan -->
+      <div class="marquee">
+        BOT KAMU ITU BOT:SELAMAT YA BOT LULUS JUGA KAMU BOT!
+      </div>
+
+      <h1>SELAMAT DATANG DI PENGUMUMAN KELULUSAN!</h1>
+      <p>PERJALANAN INI TIDAK MUDAH, TAPI KAMU BERHASIL MELEWATINYA DENGAN PENUH SEMANGAT DAN KETEKUNAN.</p>
+      <p>DAN KINI, INILAH HASIL YANG LAYAK KAMU DAPATKAN.</p>
+
+      <div class="name">NELSA</div>
+
+      <div class="status" id="statusKelulusan">
+        <span class="tidaklulus">TIDAK LULUS</span>
+        <span class="lulus">LULUS!</span>
+      </div>
+
+      <p style="margin-top: 30px;">SELAMAT, NELSA! DUNIA MENANTI JEJAK HEBATMU SELANJUTNYA.</p>
+    </div>
+  </div>
+
+  <script>
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById("resultBox").classList.add("show-lulus");
+      }, 1500); // Delay 30 detik
+    };
+  </script>
+</body>
+</html>
